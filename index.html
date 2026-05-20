@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gigante Agropet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- Floating background paws -->
+<div class="floating-bg" id="floatingBg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">🌾 Gigante<span>Agropet</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#depoimentos">Avaliações</a></li>
+    <li><a href="#contato" class="nav-cta">Agendar 📅</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="display:flex; align-items:center; gap:4rem; max-width:1200px; margin:0 auto;">
+  <div class="hero-blob blob1"></div>
+  <div class="hero-blob blob2"></div>
+  <div class="hero-blob blob3"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">🌟 #1 Agropet da Região</div>
+    <h1 class="hero-title">
+      Seu pet merece o<br><span class="highlight">melhor cuidado</span><br>do mundo!
+    </h1>
+    <p class="hero-desc">
+      Na Gigante Agropet, tratamos cada animal como se fosse nosso. Banho, tosa, ração premium e muito amor em um só lugar. 🐶🐱
+    </p>
+    <div class="hero-actions">
+      <a href="#servicos" class="btn-primary">📅 Agendar Serviço</a>
+      <a href="#produtos" class="btn-secondary">🛒 Ver Produtos</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">4.8⭐</span>
+        <span class="stat-label">Avaliação</span>
+      </div>
+      <div>
+        <span class="stat-num">2.000+</span>
+        <span class="stat-label">Clientes felizes</span>
+      </div>
+      <div>
+        <span class="stat-num">8 anos</span>
+        <span class="stat-label">De experiência</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card" style="position:relative;">
+      <span class="pet-emoji-big">🐶</span>
+      <div class="card-tag">Disponível hoje!</div>
+      <p style="text-align:center; font-weight:700; color: #888; font-size:0.85rem; margin-top:0.5rem;">Banho & Tosa Premium</p>
+      <div class="floating-cards">
+        <div class="mini-card">✂️ Tosa feita! <span style="color:var(--green)">✓</span></div>
+        <div class="mini-card">🛁 Banho aromatizado</div>
+        <div class="mini-card">❤️ Saiu lindo!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicos">
+  <div class="services-header">
+    <p class="section-sub" style="margin-bottom:0.3rem">O que oferecemos</p>
+    <h2 class="section-title">Nossos Serviços</h2>
+    <p class="section-sub">Tudo que seu bichinho precisa para ficar feliz e saudável 🐾</p>
+  </div>
+
+  <div class="services-grid" style="max-width:600px; margin:0 auto;">
+    <div class="service-card" style="--card-color: #FF6B35">
+      <span class="service-icon">🛁</span>
+      <div class="service-name">Banho & Tosa</div>
+      <p class="service-desc">Banho com shampoo premium, secagem e finalização profissional</p>
+      <span class="service-price">A partir de R$45</span>
+    </div>
+    <div class="service-card" style="--card-color: #FFD166">
+      <span class="service-icon">💅</span>
+      <div class="service-name">Estética Pet</div>
+      <p class="service-desc">Corte criativo, tintura e acessórios para deixar seu pet deslumbrante</p>
+      <span class="service-price">A partir de R$80</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="produtos" class="products">
+  <div class="products-header">
+    <div>
+      <p class="section-sub" style="margin-bottom:0.3rem">Loja online</p>
+      <h2 class="section-title">Produtos Favoritos</h2>
+    </div>
+    <a href="#" class="btn-secondary" style="white-space:nowrap">Ver todos →</a>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">
+        🦴
+        <span class="product-badge">Mais vendido</span>
+        <button class="fav-btn" onclick="addFav(this)">🤍</button>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Cães · Petisco</div>
+        <div class="product-name">Osso Natural Premium</div>
+        <div class="product-footer">
+          <span class="product-price">R$18,90</span>
+          <button class="add-cart" onclick="addCart()">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9);">
+        🐟
+        <span class="product-badge" style="background:var(--green)">Novo</span>
+        <button class="fav-btn" onclick="addFav(this)">🤍</button>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Gatos · Ração</div>
+        <div class="product-name">Ração Salmão & Atum</div>
+        <div class="product-footer">
+          <span class="product-price">R$49,90</span>
+          <button class="add-cart" onclick="addCart()">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(135deg, #FCE4EC, #F8BBD9);">
+        🎀
+        <button class="fav-btn" onclick="addFav(this)">🤍</button>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Todos · Acessório</div>
+        <div class="product-name">Kit Laços & Grampos</div>
+        <div class="product-footer">
+          <span class="product-price">R$24,90</span>
+          <button class="add-cart" onclick="addCart()">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(135deg, #E3F2FD, #BBDEFB);">
+        🏡
+        <span class="product-badge" style="background: var(--blue)">Oferta</span>
+        <button class="fav-btn" onclick="addFav(this)">🤍</button>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Cães · Cama</div>
+        <div class="product-name">Caminha Confort Luxo</div>
+        <div class="product-footer">
+          <span class="product-price">R$129,90</span>
+          <button class="add-cart" onclick="addCart()">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<div class="promo">
+  <div>
+    <span class="promo-tag">🎉 Oferta Especial</span>
+    <h2 class="promo-title">Primeiro banho grátis!<br>Para novos clientes</h2>
+    <p class="promo-desc">Traga seu pet na primeira vez e ganhe um banho completo sem custo nenhum. Oferta limitada!</p>
+    <a href="#contato" class="btn-primary" style="margin-top:1.5rem; display:inline-flex">Resgatar oferta 🎁</a>
+  </div>
+  <div class="promo-emojis">
+    <span>🐶</span><span>🐱</span><span>🐰</span>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="depoimentos">
+  <div class="testimonials-header">
+    <p class="section-sub" style="margin-bottom:0.3rem">Quem ama, conta</p>
+    <h2 class="section-title">O que dizem nossos clientes</h2>
+    <p class="section-sub">Mais de 500 avaliações 5 estrelas no Google ⭐</p>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">Minha Mel sempre sai do banho cheirosa e linda! O atendimento é incrível, tratam ela com tanto carinho. Nunca vou trocar de pet shop!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩</div>
+        <div>
+          <div class="author-name">Ana Carolina</div>
+          <div class="author-pet">Tutora da Mel 🐩</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">Meu gato Thor é muito nervoso, mas aqui ele fica super calmo. A equipe é profissional e cheia de amor pelos animais. Recomendo demais!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👨</div>
+        <div>
+          <div class="author-name">Ricardo Lima</div>
+          <div class="author-pet">Tutor do Thor 🐈</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">Usei o hotel pet nas férias e vim buscar meu Bolinha mais feliz do que nunca! Fotos e atualizações diárias, me senti segura a viagem toda.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩‍🦱</div>
+        <div>
+          <div class="author-name">Fernanda Souza</div>
+          <div class="author-pet">Tutora do Bolinha 🐕</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contato">
+  <p class="section-sub" style="margin-bottom:0.3rem">Venha nos visitar</p>
+  <h2 class="section-title">Pronto para deixar seu pet<br>ainda mais feliz? 🐾</h2>
+  <p class="section-sub">Agende um serviço ou fale conosco. Estamos aqui para cuidar do seu melhor amigo!</p>
+  <div class="cta-group">
+    <a href="https://wa.me/5511999999999" class="btn-primary">📱 Chamar no WhatsApp</a>
+    <a href="tel:+5511999999999" class="btn-secondary">📞 (11) 99999-9999</a>
+  </div>
+  <p style="margin-top:2rem; color:#aaa; font-size:0.9rem;">
+    📍 Rua dos Animais, 123 — Centro &nbsp;·&nbsp; ⏰ Seg–Sáb: 8h–19h &nbsp;·&nbsp; Dom: 9h–14h
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">🌾 Gigante<span style="color:white">Agropet</span></a>
+      <p>Cuidado e amor para cada patinha. Seu pet em boas mãos desde 2016.</p>
+      <div class="social-links" style="margin-top:1.5rem">
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">💙</a>
+        <a class="social-btn" href="#">🎵</a>
+        <a class="social-btn" href="#">📺</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#">Banho & Tosa</a></li>
+        <li><a href="#">Estética Pet</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <ul>
+        <li><a href="#">Rações</a></li>
+        <li><a href="#">Petiscos</a></li>
+        <li><a href="#">Acessórios</a></li>
+        <li><a href="#">Remédios</a></li>
+        <li><a href="#">Brinquedos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ajuda</h4>
+      <ul>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Agendamento</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Trabalhe conosco</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Gigante Agropet. Feito com ❤️</span>
+    <span style="display:flex; gap:1rem;">
+      <a href="#" style="color:#666; text-decoration:none; font-size:0.85rem">Privacidade</a>
+      <a href="#" style="color:#666; text-decoration:none; font-size:0.85rem">Termos</a>
+    </span>
+  </div>
+</footer>
+
+<!-- Notification -->
+<div class="notification" id="notification"></div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/5511999999999" class="whatsapp" title="WhatsApp">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
